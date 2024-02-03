@@ -3,14 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.1"
 
-gem 'sinatra', '~> 2.2', '>= 2.2.0'
-gem "sinatra-contrib"
-gem 'rack', '2.2.8'
+gem 'sinatra', '2.2.4'  # Updated to a version compatible with rack-protection 2.2.4
+gem 'sinatra-contrib', '2.2.4'
+gem 'mustermann', '~> 2.0'
+gem 'rack-protection', '2.2.4'
+
 
 # Use Puma as the app server
 gem "puma", "~> 5.0"
 
-# use active record
+# Use active record
 gem "sinatra-activerecord"
 
 group :development do
